@@ -1,0 +1,136 @@
+:root {
+    /* Primary colors */
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    /* Neutral colors */
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+    background-color: var(--pale-blue);
+    background-image: url('./images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.card {
+    width: 400px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.card img[alt='hero'] {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.text-info {
+    padding: 30px;
+    text-align: center;
+}
+
+.text-info h1 {
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+.text-info p {
+    color: var(--desaturated-blue);
+}
+
+.annual-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--very-pale-blue);
+    border-radius: 10px;
+}
+
+.space {
+    display: flex;
+    align-items: center;
+}
+
+.space img {
+    margin-right: 15px;
+}
+
+.annual-plan p {
+    margin: 5px 0 0;
+    color: var(--desaturated-blue);
+}
+
+.annual-plan a {
+    font-weight: 900;
+    color: var(--bright-blue);
+}
+
+.annual-plan a:hover {
+    text-decoration: none;
+    color: rgba(56, 41, 224, 0.5);
+}
+
+.plan-text p:first-child {
+    margin: 0;
+    font-weight: 900;
+    font-size: 1em;
+    color: #000;
+}
+
+.plan-text p:last-child {
+    font-weight: 600;
+}
+
+
+button {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:nth-of-type(1) {
+    background-color: var(--bright-blue);
+    color: var(--very-pale-blue);
+    box-shadow: 0 10px 30px rgba(56, 41, 224, 0.3);
+    transition: background-color 0.5s ease;
+}
+
+button:nth-of-type(1):hover {
+    background-color: rgba(56, 41, 224, 0.4);
+}
+
+button:nth-of-type(2) {
+    font-weight: 900;
+    background-color: transparent;
+    opacity: 0.4;
+    transition: opacity 0.5s ease;
+}
+
+
+button:nth-of-type(2):hover {
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+    body {
+        background-image: url('./images/pattern-background-mobile.svg');
+    }
+}
